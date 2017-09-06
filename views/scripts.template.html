@@ -1,0 +1,20 @@
+ <site-header back="back" ></site-header>
+
+<h2>{{project.name | uppercase}}</h1>
+
+<ul class="list-group">
+	<li class="list-group-item active" > Choose Scripts to run</li>
+  	<li class="list-group-item" ng-repeat="script in project.scripts" ng-class="{active : script.checked}">
+    	<input type="checkbox" ng-model="script.checked" >
+    	{{script.name}}
+  	</li>
+</ul>
+
+<button ng-click="prepareScripts()" class="btn btn-primary">Run</button>
+
+<div class="item item-divider">
+        Running Logs : 
+</div>
+<div id="log-viewer">
+Logs will be displayed here........:P
+</div>

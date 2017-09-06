@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PostMan Desktop Executor</title>
+     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">   
+    <link href="styles/custom.css" rel="stylesheet">  
+  </head>
+  <body>
+    <div ng-app="postmanExecutorApp">
+        <div class="container">
+          <div ui-view></div>
+        </div>
+    </div>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('angular')
+    require('@uirouter/angularjs')
+    var jQuery = require('jquery');
+    require('bootstrap');
+    require('./renderer.js')
+  </script>
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/controllers/dashboard.controller.js"></script>
+  <script src="./scripts/controllers/scripts.controller.js"></script>
+  
+  <script src="./scripts/services/dataProvider.service.js"></script>
+  
+  
+</html>
