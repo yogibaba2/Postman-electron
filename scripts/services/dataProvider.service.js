@@ -67,8 +67,8 @@ var  nodemailer = require('nodemailer');
 // let transporter = nodemailer.createTransport({
 //     service: 'gmail',
 //     auth: {
-//         user: 'ankit.asthana974@gmail.com',
-//         pass: 'Kapil@123'
+//         user: 'test@gmail.com',
+//         pass: 'test@123'
 //     }
 // });
 
@@ -78,24 +78,24 @@ var transporter = nodemailer.createTransport({
         port: 25,       // secure SMTP
         secure: false, // false for TLS - as a boolean not string - but the default is false so just remove this completely
         auth: {
-           user: 'AKIAJQ6PJ4T66JGQMPSQ',
-           pass: 'AomZ11YcGG4+PmbHKcmFpvXYaYuN8GjT6ewvBcvommLt'
+           user: 'keyuser',
+           pass: 'authpass'
         }
     }); 
 
 console.log(emailObj);
 
 var  mailOptions = {
-    from: 'QA@ituple.com', 
+    from: 'QA@test.com', 
     to: emailObj.toEmail+'',
     cc:emailObj.ccEmail+'', 
-    subject: 'WebServices EWS-Galaxy Integration Automation Report', 
+    subject: 'WebServices Integration Automation Report', 
     attachments:[{
             path: f }],
     text: 'This is an automated generated mail',
     html :  "<html><head><style>, th, td {border: 1px solid #888;border-collapse: collapse; padding: 10px;}th{background-color: #dcdcdc;font-weight: bold;}"
-    +"</style></head><body><p> Hi,</p><p>PFB Report for EWS-Galaxy Integration:-</p><table width='400'>"+
-    "<th colspan='3'>EWS-Galaxy Integration Report</th>"+
+    +"</style></head><body><p> Hi,</p><p>PFB Report for  Integration:-</p><table width='400'>"+
+    "<th colspan='3'> Integration Report</th>"+
     "<tr><td>#</td><td>Total</td><td>Failed</td></tr>"+
     "<tr><td>Test Script</td><td>"+summary.request.total+"</td><td style='color:red;font-weight: bold;'>"+summary.request.failed+"</td></tr>"+
    "<tr><td>Assertions</td><td>"+summary.assertions.total+"</td><td style='color:red;font-weight: bold;'>"+summary.assertions.failed+"</td></tr>"+
